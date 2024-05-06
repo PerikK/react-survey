@@ -1,7 +1,7 @@
 import RadioBtns from "./RadioBtns"
 import Checkboxes from "./Checkboxes"
 
-export default function Form({ input, setInput }) {
+export default function Form({ input, setInput, answers, setAnswers }) {
 	function handleChange(e) {
 		const { name, value } = e.target
 		setInput({
@@ -21,7 +21,7 @@ export default function Form({ input, setInput }) {
 			email: "",
 		})
 	}
-
+console.log('answ in form',answers);
 	return (
 		<div>
 			<form className='form' onSubmit={handleSubmit}>
